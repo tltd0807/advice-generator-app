@@ -39,6 +39,7 @@ body {
   font-size: 28px;
   color: hsl(193, 38%, 86%);
   margin-bottom: 30px;
+  transition: all 4s ease;
 }
 .btn-random {
   position: absolute;

@@ -16,4 +16,4 @@ const setAdvice = async (adviceId, adviceContent) => {
 btnRandom.addEventListener("click", () => {
   setAdvice(adviceId, adviceContent);
 });
-getAdvice();
+setAdvice(adviceId, adviceContent);
