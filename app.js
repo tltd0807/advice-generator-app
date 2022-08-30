@@ -3,13 +3,18 @@ const adviceContent = document.querySelector(".advice-content");
 const btnRandom = document.querySelector(".btn-random");
 
 const getAdvice = async () => {
-  const respone = await axios.get("https://api.adviceslip.com/advice");
-  console.log(respone);
+  // console.log("https://api.adviceslip.com/advice?t=" + Math.random());
+  // const url = "https://api.adviceslip.com/advice?t=" + Math.random();
+  const respone = await axios.get(
+    "https://api.adviceslip.com/advice?t=" + Math.random()
+  );
+  console.log(respone.data);
   return respone.data.slip;
 };
 
 const setAdvice = async (adviceId, adviceContent) => {
   const data = await getAdvice();
+  // console.log(data);
   adviceId.textContent = `${data.id}`;
   adviceContent.textContent = `${data.advice}`;
 };
